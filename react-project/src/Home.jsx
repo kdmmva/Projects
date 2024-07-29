@@ -16,32 +16,25 @@ export default function Home() {
 
   return (
     <div>
-      <p className="text-5xl text-purple-400">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
-      <p className="text-5xl">Hello</p>
+      <div className="relative w-full h-screen overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1636761358774-6c14f281d5c3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Full Screen Background"
+          className="w-full h-full object-cover"
+        />
+        
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Our Website</h1>
+          <div className="space-x-4">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Button 
+            </button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Button 
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className="slider-container w-full md:w-2/3 mx-auto mt-10">
         <Slider {...sliderSettings}>

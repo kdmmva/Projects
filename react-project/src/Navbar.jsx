@@ -23,7 +23,7 @@ export default function Navbar() {
   };
 
   const handleSelection = () => {
-    closeModal(); // Закрытие модального окна после выбора элемента
+    closeModal(); 
   };
 
   return (

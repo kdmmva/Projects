@@ -43,7 +43,6 @@
     }
   }
   
-  /* Общие стили для модального окна */
 .modal {
     position: relative;
     margin: auto;
@@ -56,7 +55,6 @@
     animation: fadeIn 0.3s ease-out;
   }
   
-  /* Стили для фона модального окна */
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -69,24 +67,20 @@
     align-items: center;
   }
   
-  /* Стили для заголовка модального окна */
   .modal-header {
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
     margin-bottom: 15px;
   }
   
-  /* Стили для содержимого модального окна */
   .modal-content {
     margin-bottom: 15px;
   }
   
-  /* Стили для футера модального окна */
   .modal-footer {
     text-align: right;
   }
   
-  /* Стили для кнопки закрытия модального окна */
   .close-btn {
     background: #f44336;
     color: white;
@@ -101,7 +95,6 @@
     background: #d32f2f;
   }
   
-  /* Анимация появления модального окна */
   @keyframes fadeIn {
     from {
       opacity: 0;
