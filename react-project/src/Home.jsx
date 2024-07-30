@@ -2,16 +2,69 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./Home.css";
+
+const FeaturedSection = () => (
+  <div className="flex items-center justify-center my-40 px-4">
+    <div className="flex items-center space-x-24 max-w-screen-lg">
+      <div className="flex-shrink-0 relative image-slide-in">
+        <img
+          src="https://media.istockphoto.com/id/1589417945/photo/hand-of-mechanic-holding-car-service-and-checking.webp?b=1&s=170667a&w=0&k=20&c=ve2SFpPfslb8-QEgtqkHPLG4SR15aLlJiaJrqqfa164="
+          alt="Featured Image"
+          className="w-96 h-auto object-cover rounded-lg shadow-md mb-12"
+        />
+      </div>
+      <div className="flex flex-col justify-center ml-12 mt-16 text-slide-in">
+        <h2 className="text-4xl font-bold mb-8">The best spare parts from all over the world</h2>
+        <p className="text-lg text-gray-800">
+          Discover our featured product with exceptional quality and exclusive offers. Don't miss out on this fantastic opportunity to own a top-notch item!
+          <br />
+          <br />
+          Our featured product is carefully selected to meet your needs and exceed your expectations. Explore the details and see why it's a favorite among our customers.
+        </p>
+      </div>
+    </div>
+  </div>
+);
 
 export default function Home() {
+  const products = [
+    { id: 1, image: "https://png.pngtree.com/png-vector/20240124/ourmid/pngtree-truck-fuel-oil-filter-png-image_11484953.png", price: "$199.99", description: "Filters" },
+    { id: 2, image: "https://www.ngk.com.au/wp-content/uploads/2016/11/Glow-Plug.png", price: "$299.99", description: "Spark plugs and glow plugs" },
+    { id: 3, image: "https://www.patsgarage.com/Files/Images/brake-pads.png", price: "$399.99", description: "Brake pads" },
+    { id: 4, image: "https://4x4tyres.co.uk/app/uploads/2022/01/UC_4-1950x1950.png", price: "$499.99", description: "Cast and stamped wheels" },
+    { id: 5, image: "https://www.goodyear.com/on/demandware.static/-/Sites-goodyear-master-catalog/default/dwf8600e67/images/large/Assurance_All_Season_5492.png", price: "$599.99", description: "Summer, winter and all-season tires" },
+    { id: 6, image: "https://www.4x4megaworldonline.com/wp-content/uploads/2017/03/DES-GTK-002-Desert-Deluxe-Tyre-Repair-Kit-2-e1644996050556.png", price: "$699.99", description: "Tire fitting kits" },
+    { id: 7, image: "https://image.made-in-china.com/202f0j00argbSHmshUpC/Waterproof-Car-Accessories-Parts-Car-Trunk-Mats-Universal-Interior-Decorative-Rear-Trunk-Mat-for-Jaguar.jpg", price: "$799.99", description: "Interior and trunk mats" },
+    { id: 8, image: "https://www.pngall.com/wp-content/uploads/5/Seat-Cover-PNG.png", price: "$899.99", description: "Seat covers" },
+    { id: 9, image: "https://i.pinimg.com/originals/c6/1a/da/c61adabffea8bbdca0ff27bbc915e293.png", price: "$999.99", description: "Car batteries" },
+    { id: 10, image: "https://png.pngtree.com/png-clipart/20231018/original/pngtree-two-cars-windshield-wipers-safety-photo-png-image_13346430.png", price: "$1099.99", description: "Windshield wipers and wiper blades" },
+  ];
+
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     swipe: true,
     draggable: true,
+    autoplay: true,
+    autoplaySpeed: 1300,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -22,44 +75,46 @@ export default function Home() {
           alt="Full Screen Background"
           className="w-full h-full object-cover"
         />
-        
+
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Our Website</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 fade-in-up">Welcome to Our Service</h1>
           <div className="space-x-4">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Button 
+            <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+              Button
             </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Button 
+            <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+              Button
             </button>
           </div>
         </div>
       </div>
 
-      <div className="slider-container w-full md:w-2/3 mx-auto mt-10">
+      <div className="products-carousel w-full mt-20 mb-40">
         <Slider {...sliderSettings}>
-          <div>
-            <img src="https://via.placeholder.com/800x400" alt="Slide 1" />
-            <p className="legend">Slide 1</p>
-          </div>
-          <div>
-            <img src="https://via.placeholder.com/800x400" alt="Slide 2" />
-            <p className="legend">Slide 2</p>
-          </div>
-          <div>
-            <img src="https://via.placeholder.com/800x400" alt="Slide 3" />
-            <p className="legend">Slide 3</p>
-          </div>
-          <div>
-            <img src="https://via.placeholder.com/800x400" alt="Slide 4" />
-            <p className="legend">Slide 4</p>
-          </div>
-          <div>
-            <img src="https://via.placeholder.com/800x400" alt="Slide 5" />
-            <p className="legend">Slide 5</p>
-          </div>
+          {products.map((product) => (
+            <div key={product.id} className="p-6">
+              <div className="bg-white p-4 shadow-lg rounded-lg flex flex-col items-center justify-between border border-gray-300 w-96 h-96 relative group transition-transform duration-300 hover:scale-105">
+                <div className="w-full h-3/4 flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden mb-4">
+                  <img
+                    src={product.image}
+                    alt={`Product ${product.id}`}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-lg font-semibold text-gray-900 mb-2">{product.price}</p>
+                  <p className="text-sm text-gray-700 mb-4">{product.description}</p>
+                  <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+                    Show More
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </Slider>
       </div>
+
+      <FeaturedSection />
     </div>
   );
 }
