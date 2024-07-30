@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8 border-t border-gray-200 bg-white">
-      <div className="grid gap-8 row-gap-6 mb-8 sm:grid-cols-3 lg:grid-cols-5 font-sans font-light">
+    <div className="px-4 pt-16 mx-auto bg-white border-t border-gray-200">
+      <div className="grid gap-8 row-gap-6 mb-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 font-sans font-light">
         <div>
-          <span className="text-xl font-semibold tracking-wide text-black">
-            Social
-          </span>
+          <span className="text-xl font-semibold tracking-wide text-black">Social</span>
           <div className="flex items-center mt-2 space-x-3">
             <a
               href="/"
@@ -44,10 +42,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="space-y-3 text-base">
-          <p className="text-xl font-semibold tracking-wide text-black">
-            Contacts
-          </p>
-          <div className="flex">
+          <p className="text-xl font-semibold tracking-wide text-black">Contacts</p>
+          <div className="flex flex-col sm:flex-row">
             <p className="mr-2 text-gray-600">Phone:</p>
             <a
               href="tel:850-123-5021"
@@ -58,7 +54,7 @@ export default function Footer() {
               +994 50 666 66 66
             </a>
           </div>
-          <div className="flex">
+          <div className="flex flex-col sm:flex-row">
             <p className="mr-2 text-gray-600">Email:</p>
             <a
               href="mailto:info@lorem.mail"
@@ -69,7 +65,7 @@ export default function Footer() {
               auto.service@gmail.com
             </a>
           </div>
-          <div className="flex">
+          <div className="flex flex-col sm:flex-row">
             <p className="mr-2 text-gray-600">Address:</p>
             <a
               href="https://www.google.com/maps"
@@ -84,134 +80,62 @@ export default function Footer() {
           </div>
         </div>
         <div className="space-y-3 text-base">
-          <p className="text-xl font-semibold tracking-wide text-black">
-            Navigation
-          </p>
-          <div className="flex">
+          <p className="text-xl font-semibold tracking-wide text-black">Navigation</p>
+          <div className="flex flex-col space-y-1">
             <Link to="/home">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Home
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Home</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/catalog">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Catalog
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Catalog</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/about">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                About us
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">About us</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/services">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Services
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Services</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/contact">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Contact
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Contact</a>
             </Link>
           </div>
         </div>
         <div className="space-y-3 text-base">
-          <p className="text-xl font-semibold tracking-wide text-black">
-            Resources
-          </p>
-          <div className="flex">
+          <p className="text-xl font-semibold tracking-wide text-black">Resources</p>
+          <div className="flex flex-col space-y-1">
             <Link to="/blog">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Blog
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Blog</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/faq">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                FAQ
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">FAQ</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/terms">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Terms & Conditions
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Terms & Conditions</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/privacy">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Privacy Policy
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Privacy Policy</a>
             </Link>
           </div>
         </div>
         <div className="space-y-3 text-base">
-          <p className="text-xl font-semibold tracking-wide text-black">
-            About Us
-          </p>
-          <div className="flex">
+          <p className="text-xl font-semibold tracking-wide text-black">About Us</p>
+          <div className="flex flex-col space-y-1">
             <Link to="/company">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Our Company
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Our Company</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/team">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Our Team
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Our Team</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/careers">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                Careers
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Careers</a>
             </Link>
-          </div>
-          <div className="flex">
             <Link to="/news">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">
-                News
-              </a>
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">News</a>
             </Link>
           </div>
         </div>
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
-        <p className="text-sm text-gray-600">
-          © 2024 AutoCatalog. All rights reserved.
-        </p>
-        <ul className="flex mb-3 space-x-5 lg:mb-0 text-sm">
-          <li>
-            <a
-              href="/privacy"
-              className="text-gray-600 transition-colors duration-300 hover:text-orange-600"
-            >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="/terms"
-              className="text-gray-600 transition-colors duration-300 hover:text-orange-600"
-            >
-              Terms & Conditions
-            </a>
-          </li>
-        </ul>
+        <p className="text-sm text-gray-600">© 2024 AutoCatalog. All rights reserved.</p>
       </div>
     </div>
   );

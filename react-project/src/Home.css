@@ -28,3 +28,19 @@
     animation: slideInFromRight 2s ease-out forwards;
   }
   
+  @media (max-width: 768px) {
+    .products-carousel .slick-slide {
+      padding: 0 10px;
+    }
+  
+    .products-carousel .slick-slide img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .products-carousel .slick-slide {
+      padding: 0 20px;
+    }
+  }
