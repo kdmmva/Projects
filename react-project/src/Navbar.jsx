@@ -128,7 +128,7 @@ export default function Navbar() {
             overlayClassName="modal-overlay"
           >
             <div className="modal-header">
-              <h2 className="text-2xl font-bold">Welcome!</h2>
+              <h2 className="text-2xl font-bold">Choose</h2>
             </div>
             <div className="modal-content">
               <Link to="/login" onClick={handleSelection} className="block text-blue-500 hover:text-orange-400 transition-colors duration-300 mb-2">

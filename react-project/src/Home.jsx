@@ -51,7 +51,7 @@ export default function Home() {
     swipe: true,
     draggable: true,
     autoplay: true,
-    autoplaySpeed: 1300,
+    autoplaySpeed: 1100,
     responsive: [
       {
         breakpoint: 1024,

@@ -135,7 +135,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
-        <p className="text-sm text-gray-600">© 2024 AutoCatalog. All rights reserved.</p>
+        <p className="text-sm text-gray-600">© 2024 Auto Service. All rights reserved.</p>
       </div>
     </div>
   );
