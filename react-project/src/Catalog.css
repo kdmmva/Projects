@@ -74,18 +74,19 @@
   width: 100%;
   max-width: 500px; 
   margin: 0 auto;
-  margin-left: 260px;
-  margin-bottom: 2rem;
+  margin-left: 90px;
+  margin-bottom: 5rem;
 }
 
 .search-input {
   width: 100%;
-  padding: 10px 40px 10px 20px; 
-  border: 1px solid #ccc; 
-  border-radius: 24px; 
-  font-size: 16px; 
-  outline: none; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 0.75rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
 }
 
 .search-icon {
@@ -95,4 +96,78 @@
   transform: translateY(-50%);
   color: #555; 
   cursor: pointer; 
+}
+
+.search-input:focus {
+  border-color: #a5a5a5;
+}
+
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Устанавливаем максимальную ширину для панели */
+}
+
+/* Заголовок секции */
+.sidebar h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem; /* Увеличиваем отступ снизу для лучшего разделения секций */
+}
+
+/* Лейблы и чекбоксы */
+.checkbox-group1 label,
+.checkbox-label label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem; /* Увеличиваем отступ между лейблами */
+}
+
+.checkbox-group1 input[type="checkbox"],
+.checkbox-label input[type="checkbox"] {
+  accent-color: #f44336;
+  margin-right: 0.75rem;
+}
+
+.filter-section {
+  margin-bottom: 1.5rem;
+}
+
+.filter-section label {
+  font-size: 1rem; 
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.filter-section input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 0.5rem;
+}
+
+
+.filter-section input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #f44336;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filter-section input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #f44336;
+  border-radius: 50%;
+  cursor: pointer;
 }
