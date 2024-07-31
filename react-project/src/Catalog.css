@@ -248,3 +248,40 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
+@media (min-width: 1024px) {
+  .filter-container {
+    flex-direction: row; 
+  }
+  .sidebar {
+    width: 20%; 
+    max-width: 300px; 
+  }
+  .main-content {
+    width: 80%; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .search-container {
+    margin-left: 20px;
+  }
+  .sort-buttons-container {
+    margin-top: 0; 
+    transform: none; 
+  }
+}
+
+@media (max-width: 767px) {
+
+  .product-card {
+    max-width: 100%; 
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  }
+  .grid-rectangular {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    grid-template-rows: auto;
+  }
+}

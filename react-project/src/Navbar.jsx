@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Modal from "react-modal";
-import { FaCog, FaShoppingCart } from "react-icons/fa";
+import { FaCog, FaShoppingCart, FaUser } from "react-icons/fa";
+import CartModal from './CartModal';  
+import LoginRegisterModal from './LoginRegisterModal'; 
+import { useCart } from './CartContext';
 import './Navbar.css';
-
-Modal.setAppElement('#root');
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+  const { cartItems } = useCart();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,8 +24,16 @@ export default function Navbar() {
     setIsModalOpen(false);
   };
 
+  const openCartModal = () => {
+    setIsCartModalOpen(true);
+  };
+
+  const closeCartModal = () => {
+    setIsCartModalOpen(false);
+  };
+
   const handleSelection = () => {
-    closeModal(); 
+    closeModal();
   };
 
   return (
@@ -93,59 +103,22 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="text-white focus:outline-none">
-            <FaCog className="h-6 w-6 text-white duration-300 hover:text-orange-400" />
+          <button onClick={openCartModal} className="relative">
+            <FaShoppingCart className="text-white text-2xl hover:text-orange-400 transition-colors duration-300" />
+            <span className="absolute top-0 right-0 bg-red-600 text-white rounded-full text-xs px-1">
+              {cartItems.length}
+            </span>
           </button>
-          <button className="text-white focus:outline-none">
-            <FaShoppingCart className="h-6 w-6 text-white duration-300 hover:text-orange-400" />
+          <button onClick={openModal}>
+            <FaUser className="text-white text-2xl hover:text-orange-400 transition-colors duration-300" />
           </button>
-
-          <button className="text-white focus:outline-none" onClick={openModal}>
-            <svg
-              className="h-6 w-6 text-white duration-300 hover:text-orange-400"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
-            </svg>
+          <button>
+            <FaCog className="text-white text-2xl hover:text-orange-400 transition-colors duration-300" />
           </button>
-
-          <Modal
-            isOpen={isModalOpen}
-            onRequestClose={closeModal}
-            contentLabel="Login/Register Modal"
-            className="modal"
-            overlayClassName="modal-overlay"
-          >
-            <div className="modal-header">
-              <h2 className="text-2xl font-bold">Choose</h2>
-            </div>
-            <div className="modal-content">
-              <Link to="/login" onClick={handleSelection} className="block text-blue-500 hover:text-orange-400 transition-colors duration-300 mb-2">
-                Login
-              </Link>
-              <Link to="/register" onClick={handleSelection} className="block text-blue-500 hover:text-orange-400 transition-colors duration-300">
-                Register
-              </Link>
-            </div>
-            <div className="modal-footer">
-              <button onClick={closeModal} className="close-btn">
-                Close
-              </button>
-            </div>
-          </Modal>
         </div>
       </div>
+      <CartModal isOpen={isCartModalOpen} onRequestClose={closeCartModal} />
+      <LoginRegisterModal isOpen={isModalOpen} onRequestClose={closeModal} handleSelection={handleSelection} />
     </nav>
   );
 }
