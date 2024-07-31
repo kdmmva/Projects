@@ -125,16 +125,19 @@
 }
 
 .sort-button {
+  display: flex;
+  align-items: center; 
   background-color: #ffffff; 
   border: 1px solid #d1d5db; 
   border-radius: 8px; 
-  padding: 10px 16px; 
+  padding: 10px 20px; 
   cursor: pointer;
   color: #333; 
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
   font-size: 0.875rem; 
   font-weight: 600;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  gap: 8px; 
 }
 
 .sort-button.active {
@@ -168,6 +171,12 @@
 
 .sort-button:hover {
   background-color: #e0e0e0;
+}
+
+.sort-icon {
+  margin-right: 0.5rem;
+  color: #ffffff; 
+  font-size: 1.2rem; 
 }
 
 .sidebar {

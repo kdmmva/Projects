@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaCheck } from "react-icons/fa";
 import { products } from "./data";
 import "./Catalog.css";
 
@@ -104,33 +104,38 @@ export default function Catalog() {
             <FaSearch className="search-icon" />
           </div>
           <div className="sort-buttons-container">
-            <div className="sort-buttons">
-              <button 
-                onClick={() => handleButtonClick("new")} 
-                className={`sort-button ${activeButton === 'new' ? 'active' : ''}`}
-              >
-                New
-              </button>
-              <button 
-                onClick={() => handleButtonClick("price ascending")} 
-                className={`sort-button ${activeButton === 'price ascending' ? 'active' : ''}`}
-              >
-                Price Ascending
-              </button>
-              <button 
-                onClick={() => handleButtonClick("price descending")} 
-                className={`sort-button ${activeButton === 'price descending' ? 'active' : ''}`}
-              >
-                Price Descending
-              </button>
-              <button 
-                onClick={() => handleButtonClick("rating")} 
-                className={`sort-button ${activeButton === 'rating' ? 'active' : ''}`}
-              >
-                Rating
-              </button>
-            </div>
-          </div>
+  <div className="sort-buttons">
+    <button 
+      onClick={() => handleButtonClick("new")} 
+      className={`sort-button ${activeButton === 'new' ? 'active' : ''}`}
+    >
+      {activeButton === 'new' && <FaCheck className="sort-icon" />}
+      New
+    </button>
+    <button 
+      onClick={() => handleButtonClick("price ascending")} 
+      className={`sort-button ${activeButton === 'price ascending' ? 'active' : ''}`}
+    >
+      {activeButton === 'price ascending' && <FaCheck className="sort-icon" />}
+      Price Ascending
+    </button>
+    <button 
+      onClick={() => handleButtonClick("price descending")} 
+      className={`sort-button ${activeButton === 'price descending' ? 'active' : ''}`}
+    >
+      {activeButton === 'price descending' && <FaCheck className="sort-icon" />}
+      Price Descending
+    </button>
+    <button 
+      onClick={() => handleButtonClick("rating")} 
+      className={`sort-button ${activeButton === 'rating' ? 'active' : ''}`}
+    >
+      {activeButton === 'rating' && <FaCheck className="sort-icon" />}
+      Rating
+    </button>
+  </div>
+</div>
+
         </div>
 
         <div className="grid">
