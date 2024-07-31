@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaRegHeart as HeartIcon, FaRegLaughSquint as HahaIcon, FaRegSurprise as WowIcon, FaRegSadCry as SadIcon, FaRegAngry as AngryIcon } from 'react-icons/fa';
 import { FaRegCommentDots as CommentIcon, FaShareAlt as ShareIcon } from 'react-icons/fa';
-import './News.css';
-import { posts } from './data';
+import '../News.css';
+import { posts } from '../data/data';
 
 const News = () => {
     const [showReactions, setShowReactions] = useState(null);

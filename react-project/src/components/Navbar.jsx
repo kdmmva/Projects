@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { FaCog, FaShoppingCart, FaUser } from "react-icons/fa";
 import CartModal from './CartModal';  
 import LoginRegisterModal from './LoginRegisterModal'; 
-import { useCart } from './CartContext';
-import './Navbar.css';
+import { useCart } from '../context/CartContext';
+import '../Navbar.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

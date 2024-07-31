@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { useCart } from './CartContext';
-import './CartModal.css';
+import { useCart } from '../context/CartContext';
+import '../CartModal.css';
 
 Modal.setAppElement('#root');
 

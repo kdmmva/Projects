@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaSearch, FaCheck, FaCartPlus } from 'react-icons/fa';
-import { products } from './data';
-import { useCart } from './CartContext';
-import './Catalog.css';
+import { products } from '../data/data';
+import { useCart } from '../context/CartContext';
+import '../Catalog.css';
 
 export default function Catalog() {
   const [searchTerm, setSearchTerm] = useState("");

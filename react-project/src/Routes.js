@@ -1,10 +1,10 @@
-import About from './About';
-import Catalog from './Catalog';
-import Home from './Home';
-import Main from './Main';
-import News from './News';
-import Login from './Login';
-import Register from './Register';
+import About from './components/About';
+import Catalog from './components/Catalog';
+import Home from './components/Home';
+import Main from './components/Main';
+import News from './components/News';
+import Login from './components/Login';
+import Register from './components/Register';
 
 const children = [
   { path: "/", element: <Home /> },

@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { products } from "./data"; 
-import "./Home.css";
+import { products } from "../data/data"; 
+import "../Home.css";
 
 const FeaturedSection = () => (
     <div className="flex flex-col md:flex-row items-center justify-center my-20 px-4">
