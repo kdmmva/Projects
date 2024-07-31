@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 29.99,
+      "description": "This is the description for product 1",
+      "image": "https://www.cccollision.net/wp-content/uploads/2021/01/bigstock-Car-Service-Worker-Examining-V-354492014.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 19.99,
+      "description": "This is the description for product 2",
+      "image": "https://www.cccollision.net/wp-content/uploads/2021/01/bigstock-Car-Service-Worker-Examining-V-354492014.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price": 39.99,
+      "description": "This is the description for product 3",
+      "image": "https://www.cccollision.net/wp-content/uploads/2021/01/bigstock-Car-Service-Worker-Examining-V-354492014.jpg"
+    }
+  ]
+  

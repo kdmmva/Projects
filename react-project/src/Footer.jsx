@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <div className="px-4 pt-16 mx-auto bg-white border-t border-gray-200">
-      <div className="grid gap-8 row-gap-6 mb-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 font-sans font-light">
-        <div>
+      <div className="flex flex-wrap justify-between gap-8 mb-8 sm:gap-4 lg:gap-8 font-sans font-light">
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/5">
           <span className="text-xl font-semibold tracking-wide text-black">Social</span>
           <div className="flex items-center mt-2 space-x-3">
             <a
@@ -41,7 +41,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="space-y-3 text-base">
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 space-y-3 text-base">
           <p className="text-xl font-semibold tracking-wide text-black">Contacts</p>
           <div className="flex flex-col sm:flex-row">
             <p className="mr-2 text-gray-600">Phone:</p>
@@ -79,44 +79,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="space-y-3 text-base">
-          <p className="text-xl font-semibold tracking-wide text-black">Navigation</p>
-          <div className="flex flex-col space-y-1">
-            <Link to="/home">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Home</a>
-            </Link>
-            <Link to="/catalog">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Catalog</a>
-            </Link>
-            <Link to="/about">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">About us</a>
-            </Link>
-            <Link to="/services">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Services</a>
-            </Link>
-            <Link to="/contact">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Contact</a>
-            </Link>
-          </div>
-        </div>
-        <div className="space-y-3 text-base">
-          <p className="text-xl font-semibold tracking-wide text-black">Resources</p>
-          <div className="flex flex-col space-y-1">
-            <Link to="/blog">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Blog</a>
-            </Link>
-            <Link to="/faq">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">FAQ</a>
-            </Link>
-            <Link to="/terms">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Terms & Conditions</a>
-            </Link>
-            <Link to="/privacy">
-              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Privacy Policy</a>
-            </Link>
-          </div>
-        </div>
-        <div className="space-y-3 text-base">
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 space-y-3 text-base">
           <p className="text-xl font-semibold tracking-wide text-black">About Us</p>
           <div className="flex flex-col space-y-1">
             <Link to="/company">
@@ -133,8 +96,25 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 space-y-3 text-base">
+          <p className="text-xl font-semibold tracking-wide text-black">Resources</p>
+          <div className="flex flex-col space-y-1">
+            <Link to="/blog">
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Blog</a>
+            </Link>
+            <Link to="/faq">
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">FAQ</a>
+            </Link>
+            <Link to="/terms">
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Terms & Conditions</a>
+            </Link>
+            <Link to="/privacy">
+              <a className="text-gray-600 transition-colors duration-300 hover:text-orange-600">Privacy Policy</a>
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+      <div className="flex justify-between pt-5 pb-10 border-t">
         <p className="text-sm text-gray-600">© 2024 Auto Service. All rights reserved.</p>
       </div>
     </div>
