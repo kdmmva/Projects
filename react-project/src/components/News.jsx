@@ -2,36 +2,36 @@ import React, { useState } from 'react';
 import { FaRegHeart as HeartIcon, FaRegLaughSquint as HahaIcon, FaRegSurprise as WowIcon, FaRegSadCry as SadIcon, FaRegAngry as AngryIcon } from 'react-icons/fa';
 import { FaRegCommentDots as CommentIcon, FaShareAlt as ShareIcon } from 'react-icons/fa';
 import '../News.css';
-import { posts } from '../data/data';
+import { users } from '../data/data'; 
 
 const News = () => {
     const [showReactions, setShowReactions] = useState(null);
   
-    const handleReactionToggle = (postId) => {
-      setShowReactions(showReactions === postId ? null : postId);
+    const handleReactionToggle = (userId) => { 
+      setShowReactions(showReactions === userId ? null : userId);
     };
 
     return (
         <div className="news-feed">
-            {posts.map((post) => (
-                <div key={post.id} className="news-post">
+            {users.map((user) => ( 
+                <div key={user.id} className="news-post">
                     <div className="post-header">
-                        <img src={post.userAvatar} alt={post.userName} className="user-avatar" />
+                        <img src={user.userAvatar} alt={user.userName} className="user-avatar" />
                         <div className="post-info">
-                            <h4 className="user-name">{post.userName}</h4>
-                            <span className="post-time">{post.timeAgo}</span>
+                            <h4 className="user-name">{user.userName}</h4>
+                            <span className="post-time">{user.timeAgo}</span>
                         </div>
                     </div>
-                    <p className="post-text">{post.postText}</p>
-                    {post.postImage && <img src={post.postImage} alt="Post" className="post-image" />}
+                    <p className="post-text">{user.postText}</p>
+                    {user.postImage && <img src={user.postImage} alt="Post" className="post-image" />}
                     <div className="post-actions">
                         <button
                             className="action-btn like"
-                            onClick={() => handleReactionToggle(post.id)}
+                            onClick={() => handleReactionToggle(user.id)} 
                         >
                             <HeartIcon className="action-icon" />
-                            Like {post.likes}
-                            {showReactions === post.id && (
+                            Like {user.likes}
+                            {showReactions === user.id && ( 
                                 <div className="reactions-popup">
                                     <div className="reaction">
                                         <HeartIcon className="reaction-icon" />
@@ -58,11 +58,11 @@ const News = () => {
                         </button>
                         <button className="action-btn comment">
                             <CommentIcon className="action-icon" />
-                            Comment {post.comments}
+                            Comment {user.comments}
                         </button>
                         <button className="action-btn share">
                             <ShareIcon className="action-icon" />
-                            Share {post.shares}
+                            Share {user.shares}
                         </button>
                     </div>
                 </div>

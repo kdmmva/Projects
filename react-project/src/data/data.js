@@ -14,7 +14,7 @@ export const products = [
 ];
 
 
-export const posts = [
+export const users = [
     {
         id: 2,
         userName: 'Jane Smith',
