@@ -24,11 +24,11 @@ const CartModal = ({ isOpen, onRequestClose }) => {
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Cart Modal"
-      className="modal cart-modal"
+      className="modal"
       overlayClassName="modal-overlay"
     >
       <div className="modal-header">
-        <h2 className="text-2xl font-bold">Cart</h2>
+        <h2 className="text-2xl font-bold">Your Cart</h2>
       </div>
       <div className="modal-content">
         {cartItems.length === 0 ? (
@@ -36,10 +36,10 @@ const CartModal = ({ isOpen, onRequestClose }) => {
         ) : (
           <ul>
             {cartItems.map((item, index) => (
-              <li key={index} className="flex flex-col justify-between items-start mb-4">
-                <span className="font-bold">{item.name}</span>
-                <span className="text-gray-500">{item.description}</span>
-                <span className="text-gray-500">${(item.price || 0).toFixed(2)}</span>
+              <li key={index} className="flex flex-col justify-between items-start mb-4 p-2 bg-gray-100 rounded-lg shadow-sm">
+                <span className="font-bold text-gray-900">{item.name}</span>
+                <span className="text-gray-700">{item.description}</span>
+                <span className="text-gray-700">${(item.price || 0).toFixed(2)}</span>
                 <button onClick={() => handleRemoveFromCart(index)} className="text-red-500 hover:text-red-700 mt-2">
                   Remove
                 </button>
