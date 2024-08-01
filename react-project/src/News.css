@@ -131,3 +131,7 @@
     width: 20px;
     height: 20px;
 }
+
+.action-btn.like.active .action-icon {
+    color: red; 
+}
