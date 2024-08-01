@@ -178,7 +178,7 @@ export default function Catalog() {
                   <p className="product-description">{product.description}</p>
                   <button
                     onClick={() => handleAddToCart(product)}
-                    className="add-to-cart-button flex items-center mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
+                    className="add-to-cart-button flex items-center mt-2 px-4 py-2 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600"
                   >
                     <FaCartPlus className="mr-2" />
                     Add to Cart
@@ -199,7 +199,7 @@ export default function Catalog() {
                 <p className="product-description">{product.description}</p>
                 <button 
                   onClick={() => handleAddToCart(product)} 
-                  className="add-to-cart-button flex items-center mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
+                  className="add-to-cart-button flex items-center mt-2 px-4 py-2 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600"
                 >
                   <FaCartPlus className="mr-2" />
                   Add to Cart
