@@ -119,7 +119,7 @@ const About = () => {
           </form>
         </section>
 
-        <section className="bg-white shadow-xl rounded-xl p-8 mb-16">
+        {/* <section className="bg-white shadow-xl rounded-xl p-8 mb-16">
           <h2 className="text-4xl font-semibold mb-6 text-gray-900">
             Our Location
           </h2>
@@ -135,7 +135,7 @@ const About = () => {
               ></iframe>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );
