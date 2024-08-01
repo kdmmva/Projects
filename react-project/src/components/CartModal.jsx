@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { useCart } from '../context/CartContext';
-import '../CartModal.css';
+import '../CartModal.css'; 
 
 Modal.setAppElement('#root');
 
@@ -11,6 +11,12 @@ const CartModal = ({ isOpen, onRequestClose }) => {
   const handleRemoveFromCart = (index) => {
     const updatedCart = cartItems.filter((_, i) => i !== index);
     updateCart(updatedCart);
+  };
+
+  const calculateTotal = () => {
+    return cartItems
+      .reduce((total, item) => total + (item.price || 0), 0)
+      .toFixed(2);
   };
 
   return (
@@ -30,9 +36,11 @@ const CartModal = ({ isOpen, onRequestClose }) => {
         ) : (
           <ul>
             {cartItems.map((item, index) => (
-              <li key={index} className="flex justify-between items-center mb-2">
-                <span>{item.name}</span>
-                <button onClick={() => handleRemoveFromCart(index)} className="text-red-500 hover:text-red-700">
+              <li key={index} className="flex flex-col justify-between items-start mb-4">
+                <span className="font-bold">{item.name}</span>
+                <span className="text-gray-500">{item.description}</span>
+                <span className="text-gray-500">${(item.price || 0).toFixed(2)}</span>
+                <button onClick={() => handleRemoveFromCart(index)} className="text-red-500 hover:text-red-700 mt-2">
                   Remove
                 </button>
               </li>
@@ -41,7 +49,14 @@ const CartModal = ({ isOpen, onRequestClose }) => {
         )}
       </div>
       <div className="modal-footer">
-        <button onClick={onRequestClose} className="bg-blue-500 text-white px-4 py-2 rounded">Close</button>
+        {cartItems.length > 0 && (
+          <div className="total-price text-xl font-bold">
+            Total: ${calculateTotal()}
+          </div>
+        )}
+        <button onClick={onRequestClose} className="bg-blue-500 text-white px-4 py-2 rounded">
+          Close
+        </button>
       </div>
     </Modal>
   );

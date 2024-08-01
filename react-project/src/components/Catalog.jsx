@@ -22,8 +22,18 @@ export default function Catalog() {
     updateCart(updatedCart);
   };
 
+  const parsePrice = (price) => {
+    if (typeof price === 'number') {
+      return price;
+    }
+    if (typeof price === 'string') {
+      return parseFloat(price.replace('$', ''));
+    }
+    return 0; 
+  };
+
   const filteredProducts = products.filter(product => {
-    const price = parseFloat(product.price.replace('$', ''));
+    const price = parsePrice(product.price);
     return (
       product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
       price >= minPrice && price <= maxPrice
@@ -31,11 +41,14 @@ export default function Catalog() {
   });
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
+    const priceA = parsePrice(a.price);
+    const priceB = parsePrice(b.price);
+
     if (sortOption === 'price ascending') {
-      return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
+      return priceA - priceB;
     }
     if (sortOption === 'price descending') {
-      return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''));
+      return priceB - priceA;
     }
     return 0;
   });
@@ -161,7 +174,7 @@ export default function Catalog() {
                 <img src={product.image} alt={product.name} />
                 <div className="product-info">
                   <h2 className="product-name">{product.name}</h2>
-                  <p className="product-price">{product.price}</p>
+                  <p className="product-price">${parsePrice(product.price).toFixed(2)}</p>
                   <p className="product-description">{product.description}</p>
                   <button
                     onClick={() => handleAddToCart(product)}
@@ -182,7 +195,7 @@ export default function Catalog() {
               <img src={product.image} alt={product.name} />
               <div className="product-info">
                 <h2 className="product-name">{product.name}</h2>
-                <p className="product-price">{product.price}</p>
+                <p className="product-price">${parsePrice(product.price).toFixed(2)}</p>
                 <p className="product-description">{product.description}</p>
                 <button 
                   onClick={() => handleAddToCart(product)} 

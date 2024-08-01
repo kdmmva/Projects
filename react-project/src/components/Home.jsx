@@ -6,27 +6,27 @@ import { products } from "../data/data";
 import "../Home.css";
 
 const FeaturedSection = () => (
-    <div className="flex flex-col md:flex-row items-center justify-center my-20 px-4">
-      <div className="flex flex-col md:flex-row items-center space-y-12 md:space-y-0 md:space-x-12 max-w-screen-lg">
-        <div className="flex-shrink-0 relative image-slide-in">
-          <img
-            src="https://media.istockphoto.com/id/1589417945/photo/hand-of-mechanic-holding-car-service-and-checking.webp?b=1&s=170667a&w=0&k=20&c=ve2SFpPfslb8-QEgtqkHPLG4SR15aLlJiaJrqqfa164="
-            alt="Featured Image"
-            className="w-full md:w-96 h-auto object-cover rounded-lg shadow-md"
-          />
-        </div>
-        <div className="flex flex-col justify-center text-center md:text-left text-slide-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">The best spare parts from all over the world</h2>
-          <p className="text-base md:text-lg text-gray-800">
-            Discover our featured product with exceptional quality and exclusive offers. Don't miss out on this fantastic opportunity to own a top-notch item!
-            <br />
-            <br />
-            Our featured product is carefully selected to meet your needs and exceed your expectations. Explore the details and see why it's a favorite among our customers.
-          </p>
-        </div>
+  <div className="flex flex-col md:flex-row items-center justify-center my-20 px-4">
+    <div className="flex flex-col md:flex-row items-center space-y-12 md:space-y-0 md:space-x-12 max-w-screen-lg">
+      <div className="flex-shrink-0 relative image-slide-in">
+        <img
+          src="https://media.istockphoto.com/id/1589417945/photo/hand-of-mechanic-holding-car-service-and-checking.webp?b=1&s=170667a&w=0&k=20&c=ve2SFpPfslb8-QEgtqkHPLG4SR15aLlJiaJrqqfa164="
+          alt="Featured Image"
+          className="w-full md:w-96 h-auto object-cover rounded-lg shadow-md"
+        />
+      </div>
+      <div className="flex flex-col justify-center text-center md:text-left text-slide-in">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">The best spare parts from all over the world</h2>
+        <p className="text-base md:text-lg text-gray-800">
+          Discover our featured product with exceptional quality and exclusive offers. Don't miss out on this fantastic opportunity to own a top-notch item!
+          <br />
+          <br />
+          Our featured product is carefully selected to meet your needs and exceed your expectations. Explore the details and see why it's a favorite among our customers.
+        </p>
       </div>
     </div>
-  );
+  </div>
+);
 
 export default function Home() {
   const sliderSettings = {
@@ -90,7 +90,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-semibold text-gray-900 mb-2">{product.price}</p>
+                  <p className="text-lg font-semibold text-gray-900 mb-2">${product.price}</p> {/* Добавлен знак доллара */}
                   <p className="text-sm text-gray-700 mb-4">{product.description}</p>
                   <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
                     Show More
