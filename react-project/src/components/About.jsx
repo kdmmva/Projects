@@ -15,11 +15,7 @@ const About = () => {
   return (
     <div className="bg-gradient-to-r from-orange-50 via-orange-100 to-orange-300 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <animated.h1 style={fadeIn} className="text-5xl font-extrabold text-center text-gray-900 mb-16">
-          About Us
-        </animated.h1>
-
-        <section className="relative bg-white shadow-xl rounded-xl p-8 mb-16 overflow-hidden border border-orange-200">
+        <section className="relative bg-white shadow-xl rounded-xl p-8 mb-16 mt-12 overflow-hidden border border-orange-200">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://www.shutterstock.com/image-photo/car-service-technologycustomer-satisfaction-guarantee-600nw-2271159941.jpg)', height: '70%' }}></div>
           <div className="relative z-10 bg-white bg-opacity-80 rounded-xl p-8">
             <h2 className="text-4xl font-semibold mb-6 text-gray-900">
@@ -31,7 +27,7 @@ const About = () => {
           </div>
         </section>
 
-        <section className="bg-white shadow-xl rounded-xl p-8 mb-16">
+        <section className="bg-white shadow-xl rounded-xl p-8 mb-16 mt-12">
           <h2 className="text-4xl font-semibold mb-6 text-gray-900">
             Meet Our Team
           </h2>
@@ -54,7 +50,7 @@ const About = () => {
           </div>
         </section>
 
-        <section className="bg-white shadow-xl rounded-xl p-8 mb-16">
+        <section className="bg-white shadow-xl rounded-xl p-8 mb-16 mt-12">
           <h2 className="text-4xl font-semibold mb-6 text-gray-900">
             Our Values
           </h2>
@@ -66,7 +62,7 @@ const About = () => {
           </ul>
         </section>
 
-        <section className="bg-black bg-opacity-70 backdrop-blur-md shadow-xl rounded-xl p-8 mb-16">
+        <section className="bg-black bg-opacity-70 backdrop-blur-md shadow-xl rounded-xl p-8 mb-16 mt-12">
           <h2 className="text-4xl font-semibold mb-6 text-gray-100">
             What Our Clients Say
           </h2>
@@ -90,7 +86,7 @@ const About = () => {
           </div>
         </section>
 
-        <section className="bg-black bg-opacity-70 backdrop-blur-md shadow-xl rounded-xl p-8 mb-16">
+        <section className="bg-black bg-opacity-70 backdrop-blur-md shadow-xl rounded-xl p-8 mb-16 mt-12">
           <h2 className="text-4xl font-semibold mb-6 text-gray-100">
             Get in Touch
           </h2>
@@ -118,24 +114,6 @@ const About = () => {
             </button>
           </form>
         </section>
-
-        {/* <section className="bg-white shadow-xl rounded-xl p-8 mb-16">
-          <h2 className="text-4xl font-semibold mb-6 text-gray-900">
-            Our Location
-          </h2>
-          <div className="relative w-full rounded-xl overflow-hidden">
-            <div className="w-full h-80 rounded-xl overflow-hidden shadow-md border border-orange-300">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11602.702315357264!2d49.8382615!3d40.3796592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403071d802d6b71f%3A0x419aeb00a3c6dd2!2zQmFjdXMgQXplcmJhamFu!5e0!3m2!1sen!2s!4v1628264369021!5m2!1sen!2s"
-                width="100%"
-                height="100%"
-                style={{ border: 0, borderRadius: '12px' }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-        </section> */}
       </div>
     </div>
   );
