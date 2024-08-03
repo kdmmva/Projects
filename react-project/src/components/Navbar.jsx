@@ -13,7 +13,7 @@ export default function Navbar() {
   const { cartItems } = useCart();
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prevState => !prevState);
   };
 
   const openModal = () => {
@@ -37,9 +37,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-900 p-4 fixed top-0 w-full shadow-md z-50">
+    <nav className="bg-gray-900 p-4 fixed top-0 w-full shadow-md z-50 flex items-center">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
-        <div className="flex items-center space-x-4 mb-4 lg:mb-0">
+        <div className="navbar-logo flex items-center space-x-4">
           <svg
             className="h-12 w-12 text-white transition-colors duration-300 hover:text-orange-400 animate-steering-wheel"
             fill="#ffffff"
@@ -64,7 +64,7 @@ export default function Navbar() {
         </div>
 
         <div className="lg:hidden">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <button onClick={toggleMenu} className="navbar-menu-toggle text-white focus:outline-none">
             <svg
               className="h-6 w-6"
               fill="none"
@@ -83,9 +83,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`lg:flex flex-col lg:flex-row ${
-            isOpen ? "block" : "hidden"
-          } lg:space-x-6 lg:mt-0 mt-4 flex flex-col items-center text-xl`}
+          className={`navbar-menu ${isOpen ? "open" : "hidden"} lg:flex lg:space-x-4 lg:mt-0 mt-4 flex flex-col items-center text-xl`}
         >
           <Link to="/home" className="text-white px-4 py-2 transition-colors duration-300 hover:text-orange-400">
             Home

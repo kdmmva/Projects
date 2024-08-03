@@ -56,7 +56,7 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}> 
       <div className="relative w-full h-screen overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1636761358774-6c14f281d5c3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -90,7 +90,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-semibold text-gray-900 mb-2">${product.price}</p> {/* Добавлен знак доллара */}
+                  <p className="text-lg font-semibold text-gray-900 mb-2">${product.price}</p> 
                   <p className="text-sm text-gray-700 mb-4">{product.description}</p>
                   <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
                     Show More
